@@ -11,7 +11,7 @@ const navBarItems: NavBarItemProps[] = [
 export default function NavBar() {
   return (
     <div className={styles.navBar}>
-      {navBarItems.map(navBarItem => <NavBarItem {...navBarItem} />)}
+      {navBarItems.map(navBarItem => <NavBarItem key={navBarItem.appView} {...navBarItem} />)}
     </div>
   )
 }
