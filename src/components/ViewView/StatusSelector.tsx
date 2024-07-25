@@ -1,6 +1,6 @@
 import { useTodoListStore } from '../../stores/TodoListStore';
 import { TaskStatus, Todo } from '../../types';
-import StatusSelectorOption, { StatusSelectorOptionProps } from './StatusSelectorOption';
+import StatusSelectorOption from './StatusSelectorOption';
 import styles from './styles.module.sass';
 
 
@@ -17,6 +17,7 @@ type StatusSelectorProps = {
 
 export default function StatusSelector(props: StatusSelectorProps) {
   const {todo} = props;
+  const options = OPTIONS;
 
   const todoList = useTodoListStore();
 
@@ -26,8 +27,8 @@ export default function StatusSelector(props: StatusSelectorProps) {
   }
 
   return (
-    <div className={styles.statusSelector}>
-      {OPTIONS.map(option => 
+    <div className={styles.statusSelector} style={{gridTemplateColumns: `repeat(${options.length}, 1fr)`}}>
+      {options.map(option => 
           <StatusSelectorOption {...option} onClick={() => updateStatus(option.taskStatus)} currentStatus={todo.status} />
       )}
     </div>
