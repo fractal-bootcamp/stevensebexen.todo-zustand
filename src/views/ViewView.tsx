@@ -11,6 +11,7 @@ export default function ViewView() {
       <ViewTodoContainer>
         {todoList.todos.map(todo => <ViewTodo key={todo.id} todo={todo} />)}
       </ViewTodoContainer>
+      <p>What do you mean, "they're to-dos, not notes?"</p>
     </>
   )
 }
