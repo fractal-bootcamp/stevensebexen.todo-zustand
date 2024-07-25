@@ -1,6 +1,6 @@
-import useAppViewStore from "../../stores/AppViewStore";
+import { useAppViewStore } from "../../stores/AppViewStore";
 import { AppView } from "../../types";
-import styles from './style.module.sass';
+import styles from './styles.module.sass';
 
 export type NavBarItemProps = {
   appView: AppView;

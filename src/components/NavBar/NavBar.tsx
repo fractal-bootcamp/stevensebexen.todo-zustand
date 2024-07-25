@@ -1,6 +1,6 @@
 import { AppView } from "../../types";
 import NavBarItem, { NavBarItemProps } from "./NavBarItem";
-import styles from './style.module.sass';
+import styles from './styles.module.sass';
 
 const navBarItems: NavBarItemProps[] = [
   { appView: AppView.HOME, displayName: 'Home' },
