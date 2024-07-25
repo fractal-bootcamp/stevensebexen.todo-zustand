@@ -1,6 +1,6 @@
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
-import useAppViewStore from './stores/AppViewStore'
+import { useAppViewStore } from './stores/AppViewStore'
 import ErrorView from './views/ErrorView';
 import views from './views/views';
 

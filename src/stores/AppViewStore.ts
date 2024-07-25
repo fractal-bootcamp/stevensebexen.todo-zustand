@@ -6,9 +6,7 @@ export type AppViewStore = {
   setAppView: (appView0: AppView) => void;
 }
 
-const useAppViewStore = create<AppViewStore>(set => ({
+export const useAppViewStore = create<AppViewStore>(set => ({
   appView: AppView.HOME,
-  setAppView: (appView0: AppView) => set(state => ({appView: appView0}))
+  setAppView: (appView: AppView) => set(() => ({appView}))
 }));
-
-export default useAppViewStore;
