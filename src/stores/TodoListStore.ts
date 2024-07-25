@@ -1,11 +1,12 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { Todo } from "../types";
+import { TaskStatus, Todo } from "../types";
 
 const defaultTodo = (id: number): Todo => ({
   id,
   title: 'Thing to do',
-  description: 'But will it be doed?'
+  description: 'But will it be doed?',
+  status: TaskStatus.PENDING
 });
 
 type TodoListStore = {
