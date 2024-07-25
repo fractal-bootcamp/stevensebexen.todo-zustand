@@ -20,7 +20,7 @@ export default function EditTodo(props: EditTodoProps) {
   const descriptionRef = useRef<HTMLTextAreaElement>(null);
   const todoList = useTodoListStore();
 
-  // Scale textarea to correct size on page load.
+  // Scale textarea to correct size on mount.
   useEffect(() => {
     if (!descriptionRef.current) return;
     scaleTextArea(descriptionRef.current);
