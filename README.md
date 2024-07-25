@@ -1,0 +1,1 @@
+A todo list app built using Zustand to manage state globally.
