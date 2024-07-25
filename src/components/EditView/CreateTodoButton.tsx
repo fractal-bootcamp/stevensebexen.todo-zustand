@@ -1,4 +1,5 @@
 import { useTodoListStore } from "../../stores/TodoListStore";
+import styles from './styles.module.sass';
 
 export default function CreateTodoButton() {
   const todoList = useTodoListStore();
@@ -8,6 +9,6 @@ export default function CreateTodoButton() {
   }
 
   return (
-    <button onClick={onClick}>New Todo</button>
+    <button className={styles.createButton} onClick={onClick}>New Todo</button>
   );
 }

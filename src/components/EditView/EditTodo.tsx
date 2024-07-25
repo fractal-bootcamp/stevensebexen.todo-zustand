@@ -19,10 +19,12 @@ export default function EditTodo(props: EditTodoProps) {
   }
 
   return (
-    <div className={styles.editTodoItem}>
-      <input value={todo.title} onChange={e => onChange('title', e.target.value)} />
-      <input value={todo.description} onChange={e => onChange('description', e.target.value)} />
-      <button onClick={onDelete}>X</button>
+    <div className={styles.editTodo}>
+      <div className={styles.editTodoForm}>
+        <input className={styles.title} value={todo.title} onChange={e => onChange('title', e.target.value)} />
+        <input className={styles.description} value={todo.description} onChange={e => onChange('description', e.target.value)} />
+      </div>
+      <button className={styles.deleteButton} onClick={onDelete}>X</button>
     </div>
   )
 }

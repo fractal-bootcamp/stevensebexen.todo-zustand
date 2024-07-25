@@ -1,3 +1,43 @@
 .editTodoContainer
   display: flex
   flex-direction: column
+  gap: 16px
+
+.editTodo
+  display: flex
+  background-color: #171717
+  padding: 8px 16px
+  border-radius: 6px
+
+.editTodoForm
+  display: flex
+  gap: 4px
+  flex-direction: column
+
+.editTodoForm input
+  border: none
+  outline: none
+  background-color: transparent
+  padding: 2px 4px
+
+.editTodoForm input:hover, .editTodoForm input:focus
+  background-color: #292929
+
+.title
+  font-size: 18px
+
+.description
+  font-size: 14px
+
+.deleteButton, .createButton
+  background-color: transparent
+  outline: none
+  border: none
+  color: #f187b1
+  background-color: #171717
+
+.deleteButton:hover, .deleteButton:active, .createButton:hover, .createButton:active
+  background-color: #292929
+
+.createButton
+  margin-top: 16px
