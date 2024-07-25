@@ -9,7 +9,7 @@ export default function ViewView() {
     <>
       <h2>Your Notes</h2>
       <ViewTodoContainer>
-        {todoList.todos.map(todo => <ViewTodo todo={todo} />)}
+        {todoList.todos.map(todo => <ViewTodo key={todo.id} todo={todo} />)}
       </ViewTodoContainer>
     </>
   )
